@@ -1,0 +1,109 @@
+/* src/components/Navbar/Navbar.css */
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  overflow-x: hidden;
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-menu li {
+  padding: 8px 16px;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+.navbar-menu li a.active {
+  font-weight: bold;
+  border-left: 4px solid #f0ad1d;
+  padding-left: 12px;
+}
+
+.navbar-right {
+  margin-top: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-right img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 16px;
+}
+
+.navbar-button {
+  background-color: transparent;
+  font-size: 16px;
+  color: black;
+  border: solid 1px rgb(240, 173, 29);
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar-button:hover {
+  background-color: rgb(240, 173, 29);
+}
+
+.navbar-search-icon {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: rgb(240, 173, 29);
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+
+@media(max-width: 1050px) {
+  .navbar-right img {
+    width: 22px;
+  }
+  .navbar-button {
+    padding: 8px 25px;
+  }
+}
+
+@media(max-width: 900px) {
+  .navbar-right img {
+    width: 20px;
+  }
+  .navbar-button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+
+.logo1 {
+  width: 50px;
+}

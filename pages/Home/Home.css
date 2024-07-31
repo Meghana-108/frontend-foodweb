@@ -1,0 +1,10 @@
+.home-page {
+    display: flex;
+  }
+  
+  .content {
+    margin-left: 250px; /* Width of the sidebar */
+    padding: 20px;
+    flex-grow: 1;
+  }
+  

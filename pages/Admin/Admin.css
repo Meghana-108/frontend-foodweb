@@ -1,0 +1,277 @@
+/* src/pages/Admin/Admin.css */
+
+.admin-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Light background color for the whole page */
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: rgb(240, 173, 29); /* Dark background color for the sidebar */
+  color: #fff; /* White text color */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.admin-sidebar h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-sidebar ul li {
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-sidebar ul li:hover,
+.admin-sidebar ul li.active {
+  background-color: rgb(239, 192, 90); /* Slightly lighter dark color for hover and active */
+}
+
+.admin-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 250px; /* Space for sidebar */
+}
+
+.admin-content h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.dashboard-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.metric {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.metric:last-child {
+  margin-right: 0;
+}
+
+.metric h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.metric p {
+  margin: 10px 0 0;
+  font-size: 24px;
+  color: #007bff; /* Primary color for metric values */
+}
+
+.dashboard-recent-orders,
+.dashboard-user-activity {
+  margin-bottom: 20px;
+}
+
+.dashboard-recent-orders table,
+.dashboard-user-activity ul {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-recent-orders table th,
+.dashboard-recent-orders table td,
+.dashboard-user-activity ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-recent-orders table th {
+  background-color: #f8f9fa; /* Light background for table headers */
+}
+
+.dashboard-recent-orders table td:last-child,
+.dashboard-recent-orders table th:last-child {
+  text-align: right;
+}
+
+.dashboard-user-activity ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-user-activity ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-management,
+.order-management {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-management h2,
+.order-management h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.user-management table,
+.order-management table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.user-management table th,
+.user-management table td,
+.order-management table th,
+.order-management table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-management table th {
+  background-color: #f8f9fa; /* Light background for table headers */
+}
+
+.user-management .add-user-form,
+.order-management .update-order-form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-management .add-user-form input,
+.order-management .update-order-form select,
+.order-management .update-order-form input {
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.user-management .add-user-form button,
+.order-management .update-order-form button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Primary color for buttons */
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-management .add-user-form button:hover,
+.order-management .update-order-form button:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+}
+
+.remove-button,
+.update-button {
+  background-color: #dc3545; /* Danger color for remove/update actions */
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover,
+.update-button:hover {
+  background-color: #c82333; /* Darker shade for hover */
+}
+/* Add these styles to your existing Admin.css file */
+
+.report-filter {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.report-filter input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.report-filter button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Primary color for buttons */
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.report-filter button:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+}
+
+.report-output {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.report-output h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.report-output table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.report-output table th,
+.report-output table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.report-output table th {
+  background-color: #f8f9fa; /* Light background for table headers */
+  font-weight: bold;
+}
+
+.report-output table td {
+  text-align: left;
+}
+
+.report-output table td:last-child {
+  text-align: right;
+}
+
+.report-output table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternate row color */
+}
+
